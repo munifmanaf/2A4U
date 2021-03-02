@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>User Manual</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/slide2.css">
+  </head>
+  <body>
+      <center><h1>User Manual</h1></center>
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 11</div>
+        <img src="1.jpg" style="width:100%">
+        <div class="text">Caption Text</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 11</div>
+        <img src="2.jpg" style="width:100%">
+        <div class="text">Caption Text</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 11</div>
+        <img src="3.jpg" style="width:100%">
+        <div class="text">Caption Text</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 11</div>
+        <img src="4.jpg" style="width:100%">
+        <div class="text">Caption Text</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 11</div>
+        <img src="5.jpg" style="width:100%">
+        <div class="text">Caption Text</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">6 / 11</div>
+        <img src="6.jpg" style="width:100%">
+        <div class="text">Caption Text</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">7 / 11</div>
+        <img src="7.jpg" style="width:100%">
+        <div class="text">Caption Text</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">8 / 11</div>
+        <img src="8.jpg" style="width:100%">
+        <div class="text">Caption Text</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">9 / 11</div>
+        <img src="9.jpg" style="width:100%">
+        <div class="text">Caption Text</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">10 / 11</div>
+        <img src="10.jpg" style="width:100%">
+        <div class="text">Caption Text</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">11 / 11</div>
+        <img src="11.jpg" style="width:100%">
+        <div class="text">Caption Text</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
+      <span class="dot" onclick="currentSlide(7)"></span>
+      <span class="dot" onclick="currentSlide(8)"></span>
+      <span class="dot" onclick="currentSlide(9)"></span>
+      <span class="dot" onclick="currentSlide(10)"></span>
+      <span class="dot" onclick="currentSlide(11)"></span>
+
+    </div>
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+      
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+      }
+      </script>
+      
+  </body>
+</html>
